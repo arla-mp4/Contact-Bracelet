@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, Routes, Route } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { motion } from "motion/react";
 import "./App.css";
 import {
@@ -13,6 +13,7 @@ import {
 } from "react-icons/fa6";
 
 function App() {
+  const location = useLocation();  
   const [menuOpen, setMenuOpen] = useState(false);
 
   const sections = [
@@ -20,6 +21,163 @@ function App() {
     { number: "02", title: "Things I create", id: "create" },
     { number: "03", title: "Find me elsewhere", id: "connect" },
   ];
+
+    // CM - Display separate interest pages
+  if (location.pathname !== "/") {
+    const pageTitles: Record<string, string> = {
+      "/photography": "Photography",
+      "/technology": "Technology",
+      "/everything-else": "Everything Else",
+    };
+
+    const pageTitle = pageTitles[location.pathname];
+
+    return (
+      <main className="page">
+        <header className="top-bar">
+          <img
+            src="/images/cat-millwood-logo.png"
+            alt="Cat Millwood"
+            className="logo"
+          />
+          <Link to="/" className="menu-button">
+            BACK HOME
+          </Link>
+        </header>
+
+        <section className="intro-section">
+    <p className="eyebrow">EXPLORE MY WORLD</p>
+    <h2>{pageTitle || "Page not found"}</h2>
+
+   {/* CM - Photography Portfolio */}
+    {location.pathname === "/photography" && (
+      <section className="photography-portfolio">
+
+        {/* CM - Featured photography image */}
+        <div className="photo-hero">
+          <img
+            src="https://images.unsplash.com/photo-1519741497674-611481863552?w=1200"
+            alt="Romantic outdoor photography"
+          />
+          <div className="photo-hero-overlay">
+            <p className="eyebrow">CAT MILLWOOD PHOTOGRAPHY</p>
+            <h2>Life looks good on you.</h2>
+            <p>Real people. Real moments. Beautiful stories.</p>
+          </div>
+        </div>
+
+        {/* CM - Introduction */}
+        <div className="photo-intro">
+          <p className="eyebrow">BEHIND THE CAMERA</p>
+          <h2>More than just a picture.</h2>
+          <p>
+            Photography is my way of capturing people, stories,
+            and the little moments that deserve to be remembered.
+            Whether it's a milestone or an ordinary afternoon,
+            there's something worth capturing in every story.
+          </p>
+        </div>
+
+        {/* CM - Photography gallery */}
+        <div className="photo-gallery">
+          <div className="gallery-heading">
+            <p className="eyebrow">A FEW FAVORITE MOMENTS</p>
+            <h2>Through my lens.</h2>
+          </div>
+
+          <div className="gallery-grid">
+            <img
+              src="https://images-pw.pixieset.com/site/N1bbYp/VqGk1lr/000282-f9af4cc2-1500.jpg"
+              alt="Portrait photography"
+            />
+            <img
+              src="https://images-pw.pixieset.com/site/N1bbYp/50pwmyp/20260302_105018_AD5BEC-573eb665-1500.JPEG"
+              alt="Wedding photography"
+            />
+            <img
+              src="https://images-pw.pixieset.com/site/N1bbYp/nWR0llo/IMG_0320-7b0f672a-1500.jpg"
+              alt="Lifestyle portrait"
+            />
+            <img
+              src="https://images.unsplash.com/photo-1511895426328-dc8714191300?w=700"
+              alt="Family photography"
+            />
+          </div>
+        </div>
+
+        {/* CM - Photography categories */}
+        <div className="photo-categories">
+          <p className="eyebrow">WHAT I LOVE TO CAPTURE</p>
+          <h2>Your moments, your story.</h2>
+
+          <div className="photo-category-list">
+            <div>01 <span>Portraits & Lifestyle</span></div>
+            <div>02 <span>Couples & Engagements</span></div>
+            <div>03 <span>Graduations & Seniors</span></div>
+            <div>04 <span>Weddings & Events</span></div>
+            <div>05 <span>Personal Branding</span></div>
+          </div>
+        </div>
+
+        {/* CM - Photography links */}
+        <div className="photo-cta">
+          <p className="eyebrow">LET'S MAKE SOMETHING MEMORABLE</p>
+          <h2>Have a moment in mind?</h2>
+          <a
+            href="https://catmillwood.com"
+            target="_blank"
+            rel="noreferrer"
+            className="scroll-link"
+          >
+            VISIT MY PHOTOGRAPHY WEBSITE ↗
+          </a>
+
+          <a
+            href="https://www.instagram.com/cat.millwood.photography/"
+            target="_blank"
+            rel="noreferrer"
+            className="scroll-link"
+          >
+            FOLLOW ALONG ON INSTAGRAM ↗
+          </a>
+        </div>
+
+      </section>
+    )}
+    {location.pathname === "/technology" && (
+      <>
+        <p>
+          I'm interested in computer science, web development,
+          technology, and building things that solve problems.
+        </p>
+
+        <p className="small-note">
+          Coding · Development · Hardware · Projects
+        </p>
+
+        <a href="https://github.com/arla-mp4" className="scroll-link">
+          EXPLORE MY GITHUB ↗
+        </a>
+      </>
+    )}
+
+    {location.pathname === "/everything-else" && (
+      <>
+        <p>
+          There's more to me than photography and technology.
+          I'm always learning, exploring new interests, and
+          finding new projects to get involved in.
+        </p>
+
+        <p className="small-note">
+          Experiences · Creativity · Community · New Ideas
+        </p>
+      </>
+    )}
+  </section>
+        </main>
+      );
+    }
 
   return (
     <main className="page">
