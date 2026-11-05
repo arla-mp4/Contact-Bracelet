@@ -1,0 +1,17 @@
+{
+  "name": "Cat Millwood",
+  "short_name": "Cat Millwood",
+  "description": "Connect with Cat Millwood.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#24121D",
+  "theme_color": "#24121D",
+  "icons": [
+    {
+      "src": "/images/cm-contact.png",
+      "sizes": "600x600",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

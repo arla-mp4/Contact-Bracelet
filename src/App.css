@@ -603,3 +603,45 @@ Assignment: QRLynk Personal Website
   font-size: 22px;
   color: #F4B6CC;
 }
+
+/* CM - Share page card */
+
+.share-card {
+  width: 100%;
+  min-height: 85px;
+  margin-top: 12px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #38202E;
+  border: 1px solid rgba(215, 122, 158, 0.4);
+  border-radius: 10px;
+  color: #FFF0F4;
+  text-align: left;
+}
+
+.share-card:active {
+  transform: scale(0.97);
+  background: #923B60;
+}
+
+.share-card-icon {
+  font-size: 27px;
+  color: #F4B6CC;
+}
+
+.share-card-text {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.share-card-text strong {
+  font-size: 13px;
+}
+
+.share-card-text small {
+  color: #E8B7CB;
+  font-size: 10px;
+}

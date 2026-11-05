@@ -195,6 +195,7 @@ function App() {
         </p>
 
         <ContactCard />
+        <ShareCard />
 
       </section>
 
@@ -206,6 +207,44 @@ function App() {
   );
 }
 
+// CM - Share the QRLynk page
+function ShareCard() {
+  const [shareMessage, setShareMessage] = useState("Share my page");
+
+  async function handleShare() {
+    const pageUrl = window.location.href;
+
+    try {
+      if (navigator.share) {
+        await navigator.share({
+          title: "Cat Millwood",
+          text: "Connect with me!",
+          url: pageUrl,
+        });
+      } else {
+        await navigator.clipboard.writeText(pageUrl);
+        setShareMessage("Link copied!");
+
+        setTimeout(() => {
+          setShareMessage("Share my page");
+        }, 2000);
+      }
+    } catch (error) {
+      console.log("Sharing cancelled or unavailable.", error);
+    }
+  }
+
+  return (
+    <button className="share-card" onClick={handleShare}>
+      <span className="share-card-icon">↗</span>
+
+      <span className="share-card-text">
+        <strong>{shareMessage}</strong>
+        <small>Send my page to someone</small>
+      </span>
+    </button>
+  );
+}
 
 function ContactCard() {
   const [showDetails, setShowDetails] = useState(false);
