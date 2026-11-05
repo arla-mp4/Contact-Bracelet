@@ -196,9 +196,6 @@ function App() {
 
         <ContactCard />
 
-        <p className="small-note">
-          More links and socials coming soon.
-        </p>
       </section>
 
       <footer className="footer">
@@ -221,7 +218,7 @@ function ContactCard() {
       </div>
 
       <div className="contact-card-name">
-        <p>THE PERSON BEHIND THE PAGE</p>
+        <p>THE PERSON BEHIND THE CAMERA</p>
         <h3>Cat Millwood</h3>
         <span>Creative mind. Tech enthusiast. Photographer.</span>
       </div>
@@ -305,6 +302,23 @@ function ContactCard() {
               <FaEnvelope className="social-icon" />
               <strong>Email</strong>
               <span>Say hello ↗</span>
+            </a>
+
+            <a
+              href="/contact/cat-millwood.vcf"
+              download="Cat-Millwood.vcf"
+              className="save-contact-card"
+            >
+              <div className="save-contact-icon">
+                <span>＋</span>
+              </div>
+
+              <div className="save-contact-text">
+                <strong>Save My Contact</strong>
+                <span>Add me to your contacts</span>
+              </div>
+
+              <span className="save-contact-arrow">↓</span>
             </a>
           </div>
         </div>

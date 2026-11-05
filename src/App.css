@@ -512,3 +512,94 @@ Assignment: QRLynk Personal Website
   color: #E8B7CB;
   font-size: 10px;
 }
+
+/* CM - Digital contact download card */
+
+/* CM - Digital contact download card */
+
+.save-contact-card {
+  min-height: 110px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 5px;
+  background: #54263D;
+  border: 1px solid rgba(215, 122, 158, 0.25);
+  border-radius: 10px;
+  color: #FFF0F4;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.save-contact-card:active {
+  transform: scale(0.96);
+  background: #923B60;
+}
+
+.save-contact-icon {
+  width: 25px;
+  height: 25px;
+  margin-bottom: 13px;
+  border: none;
+  color: #F4B6CC;
+  font-size: 24px;
+}
+
+.save-contact-text {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.save-contact-text strong {
+  font-size: 13px;
+}
+
+.save-contact-text span {
+  color: #E8B7CB;
+  font-size: 10px;
+}
+
+.save-contact-arrow {
+  display: none;
+}
+
+.save-contact-card:active {
+  transform: scale(0.97);
+  background: #923B60;
+}
+
+.save-contact-icon {
+  width: 43px;
+  height: 43px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #D77A9E;
+  border-radius: 8px;
+  color: #FFF0F4;
+  font-size: 25px;
+}
+
+.save-contact-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.save-contact-text strong {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.save-contact-text span {
+  color: #E8B7CB;
+  font-size: 10px;
+}
+
+.save-contact-arrow {
+  font-size: 22px;
+  color: #F4B6CC;
+}
