@@ -1,14 +1,15 @@
-
-/*
-Cat Millwood
-Date: 11/05/2026
-Class: Personal Web Development
-Assignment: QRLynk Personal Website
-*/
-
 import { useState } from "react";
 import { motion } from "motion/react";
 import "./App.css";
+import {
+  FaInstagram,
+  FaTiktok,
+  FaFacebookF,
+  FaLinkedinIn,
+  FaGithub,
+  FaGlobe,
+  FaEnvelope
+} from "react-icons/fa6";
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -208,6 +209,7 @@ function App() {
   );
 }
 
+
 function ContactCard() {
   const [showDetails, setShowDetails] = useState(false);
 
@@ -229,20 +231,87 @@ function ContactCard() {
         onClick={() => setShowDetails(!showDetails)}
         aria-expanded={showDetails}
       >
-        {showDetails ? "HIDE DETAILS −" : "REVEAL CONTACT +"}
+        {showDetails ? "HIDE DETAILS −" : "FIND ME ONLINE +"}
       </button>
 
       {showDetails && (
         <div className="contact-details">
-          <p>EMAIL</p>
-          <span>Coming soon</span>
+          <p>PHOTOGRAPHY</p>
 
-          <p>SOCIALS</p>
-          <span>Links coming soon</span>
+          <div className="contact-details-grid">
+            <a className="social-card" href="https://www.instagram.com/cat.millwood.photography/" target="_blank" rel="noopener noreferrer">
+              <FaInstagram className="social-icon" />
+              <strong>Instagram</strong>
+              <span>Photography ↗</span>
+            </a>
+
+            <a className="social-card" href="https://www.tiktok.com/@cat.millwood.photography" target="_blank" rel="noopener noreferrer">
+              <FaTiktok className="social-icon" />
+              <strong>TikTok</strong>
+              <span>Photography ↗</span>
+            </a>
+
+            <a className="social-card" href="https://www.facebook.com/profile.php?id=61559059625772" target="_blank" rel="noopener noreferrer">
+              <FaFacebookF className="social-icon" />
+              <strong>Facebook</strong>
+              <span>Photography ↗</span>
+            </a>
+
+            <a className="social-card" href="https://catmillwood.com" target="_blank" rel="noopener noreferrer">
+              <FaGlobe className="social-icon" />
+              <strong>Website</strong>
+              <span>Photography ↗</span>
+            </a>
+          </div>
+
+          <p>PERSONAL</p>
+
+          <div className="contact-details-grid">
+            <a className="social-card" href="https://www.instagram.com/cat_arlene/" target="_blank" rel="noopener noreferrer">
+              <FaInstagram className="social-icon" />
+              <strong>Instagram</strong>
+              <span>Personal ↗</span>
+            </a>
+
+            <a className="social-card" href="https://www.tiktok.com/@Cat_Unfiltered" target="_blank" rel="noopener noreferrer">
+              <FaTiktok className="social-icon" />
+              <strong>TikTok</strong>
+              <span>Personal ↗</span>
+            </a>
+
+            <a className="social-card" href="https://www.facebook.com/Cat.Millwood04" target="_blank" rel="noopener noreferrer">
+              <FaFacebookF className="social-icon" />
+              <strong>Facebook</strong>
+              <span>Personal ↗</span>
+            </a>
+          </div>
+
+          <p>PROFESSIONAL & TECH</p>
+
+          <div className="contact-details-grid">
+            <a className="social-card" href="https://www.linkedin.com/in/cat-millwood-4a694224b/" target="_blank" rel="noopener noreferrer">
+              <FaLinkedinIn className="social-icon" />
+              <strong>LinkedIn</strong>
+              <span>Professional ↗</span>
+            </a>
+
+            <a className="social-card" href="https://github.com/arla-mp4" target="_blank" rel="noopener noreferrer">
+              <FaGithub className="social-icon" />
+              <strong>GitHub</strong>
+              <span>Projects ↗</span>
+            </a>
+
+            <a className="social-card" href="mailto:caitlinmillwood40@gmail.com">
+              <FaEnvelope className="social-icon" />
+              <strong>Email</strong>
+              <span>Say hello ↗</span>
+            </a>
+          </div>
         </div>
       )}
     </div>
   );
 }
+
 
 export default App;

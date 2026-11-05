@@ -405,15 +405,110 @@ Assignment: QRLynk Personal Website
   animation: detailReveal 0.35s ease both;
 }
 
+
+.contact-details {
+  padding-top: 20px;
+  animation: detailReveal 0.35s ease both;
+}
+
 .contact-details p {
-  margin-top: 15px;
-  margin-bottom: 5px;
+  margin-top: 22px;
+  margin-bottom: 10px;
   color: #D77A9E;
   font-size: 9px;
   letter-spacing: 2px;
 }
 
+.contact-details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.social-card {
+  min-height: 90px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #54263D;
+  border: 1px solid rgba(215, 122, 158, 0.25);
+  border-radius: 8px;
+  color: #FFF0F4;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.social-card:nth-child(4n + 2) {
+  background: #38202E;
+}
+
+.social-card:nth-child(4n + 3) {
+  background: #793653;
+}
+
+.social-card:active {
+  transform: scale(0.96);
+  background: #923B60;
+}
+
+.social-card strong {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.social-card span {
+  color: #E8B7CB;
+  font-size: 10px;
+}
+
 .contact-details span {
   color: #FFF0F4;
   font-size: 13px;
+}
+
+/* CM - Social media brand icons */
+
+.social-icon {
+  width: 25px;
+  height: 25px;
+  margin-bottom: 13px;
+  color: #F4B6CC;
+  font-size: 24px;
+}
+
+.social-card {
+  min-height: 110px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background: #54263D;
+  border: 1px solid rgba(215, 122, 158, 0.25);
+  border-radius: 10px;
+  color: #FFF0F4;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.social-card:nth-child(4n + 2) {
+  background: #38202E;
+}
+
+.social-card:nth-child(4n + 3) {
+  background: #793653;
+}
+
+.social-card:active {
+  transform: scale(0.96);
+  background: #923B60;
+}
+
+.social-card strong {
+  margin-bottom: 5px;
+  font-size: 13px;
+}
+
+.social-card span {
+  color: #E8B7CB;
+  font-size: 10px;
 }
