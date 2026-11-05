@@ -1,0 +1,62 @@
+
+/*
+Cat Millwood
+Date: 11/05/2026
+Class: Personal Web Development
+Assignment: QRLynk Personal Website
+*/
+
+:root {
+  font-family: 'Trebuchet MS', sans-serif;
+  color: #FFF0F4;
+  background: #24121D;
+
+  --pink-bg: #24121D;
+  --pink-light: #FFF0F4;
+  --pink-rose: #D77A9E;
+  --pink-berry: #923B60;
+  --pink-hot: #E65B91;
+  --plum: #491D32;
+  --cream: #F8E9ED;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--pink-bg);
+}
+
+button,
+a {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+  object-fit: contain;
+}
