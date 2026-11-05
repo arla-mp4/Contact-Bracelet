@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link, Routes, Route } from "react-router-dom";
 import { motion } from "motion/react";
 import "./App.css";
 import {
@@ -13,7 +14,6 @@ import {
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [expandedInterest, setExpandedInterest] = useState<string | null>(null);
 
   const sections = [
     { number: "01", title: "A little about me", id: "about" },
@@ -117,68 +117,33 @@ function App() {
         </p>
       </section>
 
-      <button
-  className="interest-card photography-card"
-  onClick={() =>
-    setExpandedInterest(expandedInterest === "photography" ? null : "photography")
-  }
-  aria-expanded={expandedInterest === "photography"}
->
-  <span className="card-number">01 / TAP TO EXPLORE</span>
-  <div>
-    <p className="card-label">BEHIND THE CAMERA</p>
-    <h3>Photography</h3>
-    <p>People, stories, and moments worth keeping.</p>
-    {expandedInterest === "photography" && (
-      <p className="expanded-detail">
-        Portraits, lifestyle sessions, special events, and capturing the moments
-        people want to remember.
-      </p>
-    )}
-  </div>
-</button>
+        {/* CM - Navigation cards for separate pages */}
+        <Link to="/photography" className="interest-card photography-card">
+          <span className="card-number">01 / TAP TO EXPLORE ↗</span>
+          <div>
+            <p className="card-label">BEHIND THE CAMERA</p>
+            <h3>Photography</h3>
+            <p>People, stories, and moments worth keeping.</p>
+          </div>
+        </Link>
 
-<button
-  className="interest-card technology-card"
-  onClick={() =>
-    setExpandedInterest(expandedInterest === "technology" ? null : "technology")
-  }
-  aria-expanded={expandedInterest === "technology"}
->
-  <span className="card-number">02 / TAP TO EXPLORE</span>
-  <div>
-    <p className="card-label">BUILDING THINGS</p>
-    <h3>Technology</h3>
-    <p>Code, creative projects, and figuring things out.</p>
-    {expandedInterest === "technology" && (
-      <p className="expanded-detail">
-        Computer science, web development, hardware, and experimenting with
-        new ideas.
-      </p>
-    )}
-  </div>
-</button>
+        <Link to="/technology" className="interest-card technology-card">
+          <span className="card-number">02 / TAP TO EXPLORE ↗</span>
+          <div>
+            <p className="card-label">BUILDING THINGS</p>
+            <h3>Technology</h3>
+            <p>Code, creative projects, and figuring things out.</p>
+          </div>
+        </Link>
 
-<button
-  className="interest-card life-card"
-  onClick={() =>
-    setExpandedInterest(expandedInterest === "life" ? null : "life")
-  }
-  aria-expanded={expandedInterest === "life"}
->
-  <span className="card-number">03 / TAP TO EXPLORE</span>
-  <div>
-    <p className="card-label">ALWAYS LEARNING</p>
-    <h3>Everything else</h3>
-    <p>New ideas, new experiences, and whatever comes next.</p>
-    {expandedInterest === "life" && (
-      <p className="expanded-detail">
-        The projects, experiences, interests, and unexpected opportunities
-        that make life interesting.
-      </p>
-    )}
-  </div>
-</button>
+        <Link to="/everything-else" className="interest-card life-card">
+          <span className="card-number">03 / TAP TO EXPLORE ↗</span>
+          <div>
+            <p className="card-label">ALWAYS LEARNING</p>
+            <h3>Everything else</h3>
+            <p>New ideas, new experiences, and whatever comes next.</p>
+          </div>
+        </Link>
 
       <section className="connect-section" id="connect">
         <p className="eyebrow">03 / LET'S CONNECT</p>
@@ -365,6 +330,5 @@ function ContactCard() {
     </div>
   );
 }
-
 
 export default App;
