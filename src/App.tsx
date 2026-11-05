@@ -144,36 +144,557 @@ function App() {
 
       </section>
     )}
-    {location.pathname === "/technology" && (
-      <>
-        <p>
-          I'm interested in computer science, web development,
-          technology, and building things that solve problems.
-        </p>
+    {/* CM - Technology Portfolio */}
+      {location.pathname === "/technology" && (
+        <section className="technology-portfolio">
 
-        <p className="small-note">
-          Coding · Development · Hardware · Projects
-        </p>
+          {/* CM - Technology hero */}
+          <div className="tech-hero">
+            <div className="tech-hero-content">
+              <p className="eyebrow">THE TECH SIDE OF ME</p>
+              <h2>Curious mind. Always building.</h2>
+              <p>
+                From writing code to working with hardware,
+                I enjoy figuring out how things work and
+                finding ways to make them better.
+              </p>
+            </div>
+            <div className="tech-decoration">
+              <span>01</span>
+              <span>10</span>
+              <span>01</span>
+              <span>11</span>
+              <span>00</span>
+              <span>10</span>
+            </div>
+          </div>
 
-        <a href="https://github.com/arla-mp4" className="scroll-link">
-          EXPLORE MY GITHUB ↗
-        </a>
-      </>
-    )}
+          {/* CM - Featured projects */}
+          <div className="tech-projects">
+            <p className="eyebrow">CURRENTLY IN MY WORKBENCH</p>
+            <h2>Things I'm building.</h2>
 
-    {location.pathname === "/everything-else" && (
-      <>
-        <p>
-          There's more to me than photography and technology.
-          I'm always learning, exploring new interests, and
-          finding new projects to get involved in.
-        </p>
+            <div className="tech-project-card">
+              <div className="project-icon">QR</div>
+              <div className="project-number">PROJECT 01</div>
+              <h3>QRLynk (How I made this!)</h3>
+              <p>
+                An interactive digital contact experience
+                designed to connect people through an NFC
+                bracelet and personalized webpage.
+              </p>
+              <span className="project-tag">React · TypeScript · Vite</span>
+              <a
+                href="https://github.com/arla-mp4/Contact-Bracelet"
+                target="_blank"
+                rel="noreferrer"
+              >
+                VIEW PROJECT ON GITHUB ↗
+              </a>
+            </div>
 
-        <p className="small-note">
-          Experiences · Creativity · Community · New Ideas
-        </p>
-      </>
-    )}
+            <div className="tech-project-card">
+              <div className="project-icon">TKE</div>
+              <div className="project-number">PROJECT 02</div>
+              <h3>The Karen Experience</h3>
+              <p>
+                I built a terminal simulator to practice Java logic and custom exceptions,
+                but mostly just to see how much chaos I could pack into a CLI tool before 
+                I destroy my own brain from the brain rot gods themselves.
+              </p>
+              <span className="project-tag">React · TypeScript · Education</span>
+              <a
+                href="https://github.com/arla-mp4"
+                target="_blank"
+                rel="noreferrer"
+              >
+                EXPLORE MY GITHUB ↗
+              </a>
+            </div>
+          </div>
+
+          {/* CM - Technical interests */}
+          <div className="tech-interests">
+            <p className="eyebrow">WHAT I'M INTO</p>
+            <h2>A little bit of everything.</h2>
+
+            <div className="tech-interest-grid">
+              <div className="tech-interest-card">
+                <span>01</span>
+                <h3>Development</h3>
+                <p>Websites, applications, and creative coding.</p>
+              </div>
+
+              <div className="tech-interest-card">
+                <span>02</span>
+                <h3>Hardware</h3>
+                <p>Computer architecture, circuits, and electronics.</p>
+              </div>
+
+              <div className="tech-interest-card">
+                <span>03</span>
+                <h3>Problem Solving</h3>
+                <p>Breaking down problems and finding solutions.</p>
+              </div>
+
+              <div className="tech-interest-card">
+                <span>04</span>
+                <h3>Learning</h3>
+                <p>Exploring new tools, systems, and technologies.</p>
+              </div>
+            </div>
+          </div>
+
+          {/* CM - GitHub link */}
+          <div className="tech-cta">
+            <p className="eyebrow">MORE OF WHAT I'M WORKING ON</p>
+            <h2>Let's look at the code.</h2>
+            <a
+              href="https://github.com/arla-mp4"
+              target="_blank"
+              rel="noreferrer"
+              className="scroll-link"
+            >
+              VISIT MY GITHUB ↗
+            </a>
+          </div>
+
+        </section>
+      )}
+
+    {/* CM - Everything Else Personal Portfolio */}
+      {location.pathname === "/everything-else" && (
+        <section className="everything-portfolio">
+
+          {/* CM - Personal introduction */}
+          <div className="life-hero">
+            <div className="life-hero-top">
+              <p className="eyebrow">THE PERSON BEHIND THE PROJECTS</p>
+              <span className="life-stamp">A LITTLE OF EVERYTHING</span>
+            </div>
+
+            <h2>
+              One person.
+              <br />
+              A hundred interests.
+              <br />
+              Always growing.
+            </h2>
+
+            <p>
+              Photography and technology are only two parts of my world.
+              I'm also interested in people, communities, education,
+              creativity, and understanding how the world works.
+            </p>
+
+            <div className="life-hero-footer">
+              <span>CURIOUS BY NATURE</span>
+              <span>EST. ALWAYS LEARNING ♡</span>
+            </div>
+          </div>
+
+          {/* CM - About me */}
+          <div className="life-about">
+            <p className="eyebrow">A LITTLE MORE ABOUT ME</p>
+            <h2>There's more to the story.</h2>
+
+            <p>
+              I enjoy having different interests and finding ways to
+              connect them. One day I might be focused on a class,
+              another day working on a community project, and another
+              exploring a completely new opportunity.
+            </p>
+
+            <p>
+              I like being involved, learning through experience, and
+              taking on projects that let me approach things from
+              different perspectives. I don't really want to limit
+              myself to one subject or one type of experience.
+            </p>
+
+            <p>
+              That's a big part of what makes this page important.
+              It's a place for everything that doesn't necessarily
+              fit into one category.
+            </p>
+          </div>
+
+          {/* CM - Academic journey */}
+          <div className="life-section">
+            <div className="life-section-heading">
+              <p className="eyebrow">01 / EDUCATION</p>
+            </div>
+            <h2>Learning goes beyond one subject.</h2>
+
+            <div className="education-card">
+              <div className="education-top">
+                <span>UNIVERSITY OF ARKANSAS</span>
+                <span>RAZORBACK COUNTRY</span>
+              </div>
+
+              <h3>My academic journey.</h3>
+
+              <p className="education-degree">
+                Bachelor of Arts in Computer Science
+              </p>
+
+              <p>
+                My academic interests reach beyond traditional
+                computer science. I'm combining technical studies
+                with subjects that help me understand people,
+                behavior, communities, and society.
+              </p>
+
+              <div className="education-divider" />
+
+              <p className="eyebrow">MY AREAS OF STUDY</p>
+
+              <div className="degree-list">
+                <div>
+                  <span className="degree-number">01</span>
+                  <div>
+                    <h4>Computer Science B.A.</h4>
+                    <p>My primary degree program.<p>
+                    </p>Expected Graduation Date: December 2028</p>
+                  </div>
+                </div>
+
+                <div>
+                  <span className="degree-number">02</span>
+                  <div>
+                    <h4>Minor in Psychology</h4>
+                    <p>Understanding the mind and human behavior.</p>
+                  </div>
+                </div>
+
+                <div>
+                  <span className="degree-number">03</span>
+                  <div>
+                    <h4>Minor in Sociology</h4>
+                    <p>Understanding society, relationships, and communities.</p>
+                  </div>
+                </div>
+
+                <div>
+                  <span className="degree-number">04</span>
+                  <div>
+                    <h4>Minor in Criminology</h4>
+                    <p>Exploring crime, justice, and the criminal justice system.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <p className="life-side-note">
+              Different subjects. Different perspectives. One very curious mind.
+            </p>
+          </div>
+
+          {/* CM - Psychology, sociology and criminology */}
+          <div className="life-section">
+            <p className="eyebrow">02 / UNDERSTANDING PEOPLE</p>
+            <h2>Interested in the bigger picture.</h2>
+
+            <p className="life-section-description">
+              Some of my interests are less about building technology
+              and more about understanding the people who use it,
+              the communities they live in, and the systems around them.
+            </p>
+
+            <div className="subject-card">
+              <div className="subject-card-header">
+                <span>01</span>
+                <span>THE INDIVIDUAL</span>
+              </div>
+              <div className="subject-symbol">𖡎</div>
+              <h3>Psychology</h3>
+              <p>
+                How people think, feel, learn, and behave.
+                Psychology offers a way to explore personality,
+                decision-making, motivation, and the experiences
+                that influence individuals.
+              </p>
+              <div className="subject-tags">
+                <span>Personality</span>
+                <span>Behavior</span>
+                <span>Cognition</span>
+                <span>Learning</span>
+              </div>
+            </div>
+
+            <div className="subject-card">
+              <div className="subject-card-header">
+                <span>02</span>
+                <span>THE COMMUNITY</span>
+              </div>
+              <div className="subject-symbol">🫀</div>
+              <h3>Sociology</h3>
+              <p>
+                How people interact, how communities develop,
+                and how social structures influence everyday life.
+                Sociology connects individual experiences to
+                larger patterns in society.
+              </p>
+              <div className="subject-tags">
+                <span>Communities</span>
+                <span>Culture</span>
+                <span>Social systems</span>
+                <span>Relationships</span>
+              </div>
+            </div>
+
+            <div className="subject-card">
+              <div className="subject-card-header">
+                <span>03</span>
+                <span>THE JUSTICE SYSTEM</span>
+              </div>
+              <div className="subject-symbol">🛡️</div>
+              <h3>Criminology</h3>
+              <p>
+                Exploring crime, its causes, the criminal justice
+                system, and the ways communities respond to
+                challenges involving public safety and justice.
+              </p>
+              <div className="subject-tags">
+                <span>Criminal justice</span>
+                <span>Crime</span>
+                <span>Public safety</span>
+                <span>Society</span>
+              </div>
+            </div>
+          </div>
+
+          {/* CM - Community involvement */}
+          <div className="life-section">
+            <div className="life-section-heading">
+              <p className="eyebrow">03 / COMMUNITY & INVOLVEMENT</p>
+              <span className="life-section-symbol">♡</span>
+            </div>
+
+            <h2>Being part of something bigger.</h2>
+
+            <p className="life-section-description">
+              I enjoy opportunities that bring people together,
+              encourage learning, and create something meaningful
+              outside of a traditional classroom.
+            </p>
+
+            <div className="community-card">
+              <div className="community-card-top">
+                <span>COMMUNITY PROJECTS</span>
+                <span>01</span>
+              </div>
+
+              <h3>NatureSTEAM</h3>
+
+              <p>
+                NatureSTEAM is a nonprofit organization involved
+                in community projects that connect nature, science,
+                technology, engineering, art, and mathematics.
+              </p>
+
+              <p>
+                I'm interested in helping create activities and
+                experiences that make learning more accessible,
+                interactive, and enjoyable.
+              </p>
+
+              <div className="community-highlight">
+                <span>UPCOMING PROJECT</span>
+                <h4>Plant Yourself Here</h4>
+                <p>
+                  A hands-on Welcome Week activity centered around
+                  decorating small plant pots, planting succulents
+                  or herbs, and introducing participants to basic
+                  plant biology, soil science, and growth.
+                </p>
+              </div>
+
+              <div className="subject-tags">
+                <span>Community</span>
+                <span>Education</span>
+                <span>STEAM</span>
+                <span>Creativity</span>
+              </div>
+            </div>
+          </div>
+
+          {/* CM - Professional experiences */}
+          <div className="life-section">
+            <p className="eyebrow">04 / PROFESSIONAL EXPERIENCES</p>
+            <h2>Learning by doing.</h2>
+
+            <p className="life-section-description">
+              Education is important, but some of the most useful
+              experiences come from applying what I learn in real
+              situations, working with other people, and taking
+              responsibility for different projects.
+            </p>
+
+            <div className="experience-timeline">
+
+              <div className="experience-item">
+                <div className="experience-marker">01</div>
+                <div className="experience-content">
+                  <span>INTERNSHIP EXPERIENCE</span>
+                  <h3>Learning in professional environments</h3>
+                  <p>
+                    Gaining experience through internships,
+                    developing professional skills, and exploring
+                    how academic knowledge applies outside the
+                    university environment.
+                  </p>
+                </div>
+              </div>
+
+              <div className="experience-item">
+                <div className="experience-marker">02</div>
+                <div className="experience-content">
+                  <span>WORK EXPERIENCE</span>
+                  <h3>Building practical skills</h3>
+                  <p>
+                    Working while balancing school and other
+                    responsibilities provides opportunities to
+                    develop communication, organization,
+                    problem-solving, and time-management skills.
+                  </p>
+                </div>
+              </div>
+
+              <div className="experience-item">
+                <div className="experience-marker">03</div>
+                <div className="experience-content">
+                  <span>PERSONAL DEVELOPMENT</span>
+                  <h3>Trying new things</h3>
+                  <p>
+                    Exploring opportunities that introduce new
+                    challenges, different perspectives, and
+                    experiences that contribute to personal
+                    and professional growth.
+                  </p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          {/* CM - Other interests */}
+          <div className="life-section">
+            <p className="eyebrow">05 / OUTSIDE THE CHECKLIST</p>
+            <h2>Things that make life interesting.</h2>
+
+            <p className="life-section-description">
+              Not every interest needs to turn into a career,
+              a class, or a project. Some things are simply
+              interesting to explore.
+            </p>
+
+            <div className="life-interest-grid">
+
+              <div className="life-interest-card">
+                <h3>People & Stories</h3>
+                <p>
+                  Learning about different experiences,
+                  perspectives, and the stories people have to tell.
+                </p>
+              </div>
+
+              <div className="life-interest-card">
+                <h3>Creativity</h3>
+                <p>
+                  Finding different ways to express ideas,
+                  experiment, and create something new.
+                </p>
+              </div>
+
+              <div className="life-interest-card">
+                <h3>Community</h3>
+                <p>
+                  Getting involved in activities and projects
+                  that bring people together.
+                </p>
+              </div>
+
+              <div className="life-interest-card">
+                <h3>Exploration</h3>
+                <p>
+                  Discovering new subjects, opportunities,
+                  experiences, and things worth learning.
+                </p>
+              </div>
+
+              <div className="life-interest-card">
+                <h3>New Ideas</h3>
+                <p>
+                  Thinking about possibilities and finding
+                  connections between completely different subjects.
+                </p>
+              </div>
+
+              <div className="life-interest-card">
+                <h3>Personal Growth</h3>
+                <p>
+                  Building new skills, learning from experiences,
+                  and continuing to develop.
+                </p>
+              </div>
+
+            </div>
+          </div>
+
+          {/* CM - Putting everything together */}
+          <div className="life-summary">
+            <p className="eyebrow">06 / THE BIGGER PICTURE</p>
+            <h2>All of these things are part of the story.</h2>
+
+            <p>
+              Computer science gives me a technical perspective.
+              Psychology, sociology, and criminology introduce
+              different ways to understand people and society.
+              Community involvement creates opportunities to
+              put ideas into action. Work and internships provide
+              experiences beyond the classroom.
+            </p>
+
+            <p>
+              They may seem like very different interests, but
+              they all contribute to the same thing: continuing
+              to learn, explore, create, and find new opportunities.
+            </p>
+
+            <div className="life-summary-signoff">
+              <span>THANKS FOR GETTING TO KNOW ME</span>
+              <span>♡ CAT</span>
+            </div>
+          </div>
+
+          {/* CM - Page navigation */}
+          <div className="life-cta">
+            <p className="eyebrow">THERE'S MORE TO EXPLORE</p>
+            <h2>Take another look around.</h2>
+            <p>
+              Check out the other sides of what I do.
+            </p>
+
+            <Link to="/photography" className="life-page-link">
+              <span>Photography</span>
+              <span>01 ↗</span>
+            </Link>
+
+            <Link to="/technology" className="life-page-link">
+              <span>Technology</span>
+              <span>02 ↗</span>
+            </Link>
+
+            <Link to="/" className="life-page-link">
+              <span>Back to home</span>
+              <span>HOME ↗</span>
+            </Link>
+          </div>
+
+        </section>
+      )}
+
   </section>
         </main>
       );
