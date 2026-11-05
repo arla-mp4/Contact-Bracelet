@@ -181,15 +181,19 @@ function App() {
 
       <section className="connect-section" id="connect">
         <p className="eyebrow">03 / LET'S CONNECT</p>
-        <h2>Don't be a stranger.</h2>
+
+        <h2>
+          Don't be
+          <br />
+          <span>a stranger.</span>
+        </h2>
+
         <p>
           Have a question, an idea, or just want to say hello?
           Here's where you can find me.
         </p>
 
-        <a className="contact-link" href="mailto:">
-          SEND ME AN EMAIL <span>↗</span>
-        </a>
+        <ContactCard />
 
         <p className="small-note">
           More links and socials coming soon.
@@ -201,6 +205,43 @@ function App() {
         <span>CM. © 2026</span>
       </footer>
     </main>
+  );
+}
+
+function ContactCard() {
+  const [showDetails, setShowDetails] = useState(false);
+
+  return (
+    <div className="contact-card">
+      <div className="contact-card-top">
+        <span>YOUR DIGITAL CONTACT CARD</span>
+        <span>CM. / 2026</span>
+      </div>
+
+      <div className="contact-card-name">
+        <p>THE PERSON BEHIND THE PAGE</p>
+        <h3>Cat Millwood</h3>
+        <span>Creative mind. Tech enthusiast. Photographer.</span>
+      </div>
+
+      <button
+        className="contact-reveal"
+        onClick={() => setShowDetails(!showDetails)}
+        aria-expanded={showDetails}
+      >
+        {showDetails ? "HIDE DETAILS −" : "REVEAL CONTACT +"}
+      </button>
+
+      {showDetails && (
+        <div className="contact-details">
+          <p>EMAIL</p>
+          <span>Coming soon</span>
+
+          <p>SOCIALS</p>
+          <span>Links coming soon</span>
+        </div>
+      )}
+    </div>
   );
 }
 

@@ -342,3 +342,78 @@ Assignment: QRLynk Personal Website
   content: "−";
   transform: rotate(180deg);
 }
+
+.contact-card {
+  margin-top: 35px;
+  padding: 22px;
+  background: linear-gradient(145deg, #54263D, #24121D);
+  border: 1px solid #92506D;
+  border-radius: 8px;
+}
+
+.contact-card-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  color: #D77A9E;
+  font-size: 8px;
+  letter-spacing: 1.5px;
+}
+
+.contact-card-name {
+  padding: 45px 0 35px;
+}
+
+.contact-card-name p {
+  color: #D77A9E;
+  font-size: 9px;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.contact-card-name h3 {
+  font-family: Georgia, serif;
+  font-size: 38px;
+  font-weight: normal;
+  letter-spacing: -1px;
+}
+
+.contact-card-name span {
+  display: block;
+  margin-top: 10px;
+  color: #D8BAC6;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.contact-reveal {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #D77A9E;
+  background: transparent;
+  color: #FFF0F4;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+.contact-reveal:active {
+  background: #923B60;
+}
+
+.contact-details {
+  padding-top: 20px;
+  animation: detailReveal 0.35s ease both;
+}
+
+.contact-details p {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  color: #D77A9E;
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+.contact-details span {
+  color: #FFF0F4;
+  font-size: 13px;
+}
