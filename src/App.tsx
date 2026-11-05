@@ -758,7 +758,7 @@ function App() {
         <div className="hero-image-wrap">
           <motion.img
             className="hero-image"
-            src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=900"
+            src="https://scontent-dfw5-2.xx.fbcdn.net/v/t39.30808-6/776324749_2082363015699187_6492662304823384581_n.jpg?stp=dst-jpg_tt6&cstp=mx960x960&ctp=s960x960&_nc_cat=104&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=EjieYggKEmUQ7kNvwHLck5K&_nc_oc=Adq40p3mnvfjtk54G5XxGUycax-128MJkjf_UBy_BZgOdGx9Is4iCAM-R9O3vgDih-k&_nc_zt=23&_nc_ht=scontent-dfw5-2.xx&_nc_gid=Tt5xMcIyOgBUNU0XGriCug&_nc_ss=7a2a8&oh=00_AQRgmtdtEAUcM33t1rYbIgtWakTRYxMJUCbSOjFEHfvAng&oe=6AF28814"
             alt="Portrait photograph"
             initial={{ opacity: 0, scale: 0.94 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -845,7 +845,7 @@ function App() {
 
       <footer className="footer">
         <span>MADE WITH A LITTLE PERSONALITY ♡</span>
-        <span>CM. © 2026</span>
+        <span>CAT MILLWOOD © 2026</span>
       </footer>
     </main>
   );
@@ -897,7 +897,7 @@ function ContactCard() {
     <div className="contact-card">
       <div className="contact-card-top">
         <span>YOUR DIGITAL CONTACT CARD</span>
-        <span>CM. / 2026</span>
+        <span>CAT MILLWOOD / 2026</span>
       </div>
 
       <div className="contact-card-name">
