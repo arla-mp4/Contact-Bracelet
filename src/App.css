@@ -1,10 +1,7 @@
-
-/*
-Cat Millwood
-Date: 11/05/2026
-Class: Personal Web Development
-Assignment: QRLynk Personal Website
-*/
+/* =========================================================
+   CM - GLOBAL PAGE SETTINGS
+   Controls the main application container and page width.
+========================================================= */
 
 #root {
   width: 100%;
@@ -18,6 +15,11 @@ Assignment: QRLynk Personal Website
   overflow: hidden;
   background: #24121D;
 }
+
+/* =========================================================
+   CM - HEADER AND NAVIGATION
+   Controls the top navigation bar, logo, and dropdown menu.
+========================================================= */
 
 .top-bar {
   height: 75px;
@@ -56,6 +58,11 @@ Assignment: QRLynk Personal Website
   color: #D77A9E;
 }
 
+/* =========================================================
+   CM - HERO SECTION
+   Controls the main introduction, headline, and featured image.
+========================================================= */
+
 .hero {
   padding: 75px 0 65px;
 }
@@ -88,6 +95,8 @@ Assignment: QRLynk Personal Website
   font-style: italic;
 }
 
+/* CM - Hero image positioning and appearance */
+
 .hero-image-wrap {
   position: relative;
   width: 83%;
@@ -103,6 +112,8 @@ Assignment: QRLynk Personal Website
   border-radius: 48% 48% 4px 4px;
   filter: saturate(0.75);
 }
+
+/* CM - Decorative text layered over the hero image */
 
 .image-note {
   position: absolute;
@@ -127,6 +138,8 @@ Assignment: QRLynk Personal Website
   color: #FFF0F4;
 }
 
+/* CM - Hero description and scroll navigation */
+
 .hero-description {
   max-width: 300px;
   color: #D8BAC6;
@@ -148,6 +161,11 @@ Assignment: QRLynk Personal Website
 .scroll-link span {
   font-size: 18px;
 }
+
+/* =========================================================
+   CM - INTRODUCTION SECTION
+   Controls the personal introduction and descriptive text.
+========================================================= */
 
 .intro-section {
   padding: 75px 0;
@@ -177,12 +195,20 @@ Assignment: QRLynk Personal Website
   line-height: 1.7;
 }
 
+/* =========================================================
+   CM - INTERESTS AND CREATIVE PROJECTS
+   Controls the photography, technology, and personal interest cards.
+========================================================= */
+
 .create-section {
   padding: 70px 0;
   border-top: 1px solid #492638;
 }
 
+/* CM - Main interest card layout */
+
 .interest-card {
+  width: 100%;
   min-height: 190px;
   margin-top: 17px;
   padding: 23px;
@@ -192,7 +218,14 @@ Assignment: QRLynk Personal Website
   border-radius: 5px;
   position: relative;
   overflow: hidden;
+  text-align: left;
+  color: #FFF0F4;
+  font-family: inherit;
+  cursor: pointer;
+  transition: transform 0.25s ease, border-color 0.25s ease;
 }
+
+/* CM - Individual interest card backgrounds */
 
 .photography-card {
   background: #54263D;
@@ -206,6 +239,8 @@ Assignment: QRLynk Personal Website
 .life-card {
   background: #793653;
 }
+
+/* CM - Interest card text and labels */
 
 .card-number {
   font-size: 10px;
@@ -232,6 +267,43 @@ Assignment: QRLynk Personal Website
   font-size: 12px;
   line-height: 1.6;
 }
+
+/* CM - Interest card interaction and expanded content */
+
+.interest-card:active {
+  transform: scale(0.98);
+}
+
+.interest-card::after {
+  content: "+";
+  position: absolute;
+  right: 22px;
+  top: 20px;
+  color: #F0B6CB;
+  font-size: 22px;
+  font-weight: 300;
+  transition: transform 0.3s ease;
+}
+
+.interest-card[aria-expanded="true"]::after {
+  content: "−";
+  transform: rotate(180deg);
+}
+
+.expanded-detail {
+  margin-top: 15px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 240, 244, 0.3);
+  color: #FFF0F4;
+  font-size: 13px;
+  line-height: 1.7;
+  animation: detailReveal 0.35s ease both;
+}
+
+/* =========================================================
+   CM - CONNECT SECTION
+   Controls the main contact introduction and contact link.
+========================================================= */
 
 .connect-section {
   padding: 75px 0;
@@ -261,87 +333,10 @@ Assignment: QRLynk Personal Website
   font-size: 20px;
 }
 
-.footer {
-  border-top: 1px solid #492638;
-  padding: 25px 0;
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
-  color: #A87C90;
-  font-size: 8px;
-  letter-spacing: 1px;
-}
-
-@media (max-width: 380px) {
-  .page {
-    padding: 0 18px;
-  }
-
-  .hero h1 {
-    font-size: 65px;
-  }
-
-  .hero-image {
-    height: 320px;
-  }
-
-  .intro-section h2,
-  .create-section h2,
-  .connect-section h2 {
-    font-size: 50px;
-  }
-}
-
-.interest-card {
-  width: 100%;
-  text-align: left;
-  color: #FFF0F4;
-  font-family: inherit;
-  cursor: pointer;
-  transition: transform 0.25s ease, border-color 0.25s ease;
-}
-
-.interest-card:active {
-  transform: scale(0.98);
-}
-
-.expanded-detail {
-  margin-top: 15px;
-  padding-top: 12px;
-  border-top: 1px solid rgba(255, 240, 244, 0.3);
-  color: #FFF0F4;
-  font-size: 13px;
-  line-height: 1.7;
-  animation: detailReveal 0.35s ease both;
-}
-
-@keyframes detailReveal {
-  from {
-    opacity: 0;
-    transform: translateY(12px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.interest-card::after {
-  content: "+";
-  position: absolute;
-  right: 22px;
-  top: 20px;
-  color: #F0B6CB;
-  font-size: 22px;
-  font-weight: 300;
-  transition: transform 0.3s ease;
-}
-
-.interest-card[aria-expanded="true"]::after {
-  content: "−";
-  transform: rotate(180deg);
-}
+/* =========================================================
+   CM - DIGITAL CONTACT CARD
+   Controls the personal contact card and contact information.
+========================================================= */
 
 .contact-card {
   margin-top: 35px;
@@ -351,6 +346,8 @@ Assignment: QRLynk Personal Website
   border-radius: 8px;
 }
 
+/* CM - Contact card header */
+
 .contact-card-top {
   display: flex;
   justify-content: space-between;
@@ -359,6 +356,8 @@ Assignment: QRLynk Personal Website
   font-size: 8px;
   letter-spacing: 1.5px;
 }
+
+/* CM - Contact card name and introduction */
 
 .contact-card-name {
   padding: 45px 0 35px;
@@ -386,6 +385,8 @@ Assignment: QRLynk Personal Website
   line-height: 1.6;
 }
 
+/* CM - Contact information reveal button */
+
 .contact-reveal {
   width: 100%;
   padding: 15px;
@@ -400,11 +401,7 @@ Assignment: QRLynk Personal Website
   background: #923B60;
 }
 
-.contact-details {
-  padding-top: 20px;
-  animation: detailReveal 0.35s ease both;
-}
-
+/* CM - Revealed contact information */
 
 .contact-details {
   padding-top: 20px;
@@ -419,62 +416,23 @@ Assignment: QRLynk Personal Website
   letter-spacing: 2px;
 }
 
+.contact-details span {
+  color: #FFF0F4;
+  font-size: 13px;
+}
+
+/* CM - Contact information grid */
+
 .contact-details-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 10px;
 }
 
-.social-card {
-  min-height: 90px;
-  padding: 14px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background: #54263D;
-  border: 1px solid rgba(215, 122, 158, 0.25);
-  border-radius: 8px;
-  color: #FFF0F4;
-  transition: transform 0.2s ease, background 0.2s ease;
-}
-
-.social-card:nth-child(4n + 2) {
-  background: #38202E;
-}
-
-.social-card:nth-child(4n + 3) {
-  background: #793653;
-}
-
-.social-card:active {
-  transform: scale(0.96);
-  background: #923B60;
-}
-
-.social-card strong {
-  font-size: 13px;
-  font-weight: 600;
-}
-
-.social-card span {
-  color: #E8B7CB;
-  font-size: 10px;
-}
-
-.contact-details span {
-  color: #FFF0F4;
-  font-size: 13px;
-}
-
-/* CM - Social media brand icons */
-
-.social-icon {
-  width: 25px;
-  height: 25px;
-  margin-bottom: 13px;
-  color: #F4B6CC;
-  font-size: 24px;
-}
+/* =========================================================
+   CM - SOCIAL MEDIA CARDS
+   Controls the social media links and their visual appearance.
+========================================================= */
 
 .social-card {
   min-height: 110px;
@@ -490,6 +448,8 @@ Assignment: QRLynk Personal Website
   transition: transform 0.2s ease, background 0.2s ease;
 }
 
+/* CM - Alternating social card colors */
+
 .social-card:nth-child(4n + 2) {
   background: #38202E;
 }
@@ -498,14 +458,19 @@ Assignment: QRLynk Personal Website
   background: #793653;
 }
 
+/* CM - Social card interaction */
+
 .social-card:active {
   transform: scale(0.96);
   background: #923B60;
 }
 
+/* CM - Social card text */
+
 .social-card strong {
   margin-bottom: 5px;
   font-size: 13px;
+  font-weight: 600;
 }
 
 .social-card span {
@@ -513,9 +478,20 @@ Assignment: QRLynk Personal Website
   font-size: 10px;
 }
 
-/* CM - Digital contact download card */
+/* CM - Social media brand icons */
 
-/* CM - Digital contact download card */
+.social-icon {
+  width: 25px;
+  height: 25px;
+  margin-bottom: 13px;
+  color: #F4B6CC;
+  font-size: 24px;
+}
+
+/* =========================================================
+   CM - SAVE CONTACT CARD
+   Controls the digital contact download button and icon.
+========================================================= */
 
 .save-contact-card {
   min-height: 110px;
@@ -532,43 +508,14 @@ Assignment: QRLynk Personal Website
   transition: transform 0.2s ease, background 0.2s ease;
 }
 
-.save-contact-card:active {
-  transform: scale(0.96);
-  background: #923B60;
-}
-
-.save-contact-icon {
-  width: 25px;
-  height: 25px;
-  margin-bottom: 13px;
-  border: none;
-  color: #F4B6CC;
-  font-size: 24px;
-}
-
-.save-contact-text {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
-.save-contact-text strong {
-  font-size: 13px;
-}
-
-.save-contact-text span {
-  color: #E8B7CB;
-  font-size: 10px;
-}
-
-.save-contact-arrow {
-  display: none;
-}
+/* CM - Save contact card interaction */
 
 .save-contact-card:active {
   transform: scale(0.97);
   background: #923B60;
 }
+
+/* CM - Save contact icon */
 
 .save-contact-icon {
   width: 43px;
@@ -581,6 +528,8 @@ Assignment: QRLynk Personal Website
   color: #FFF0F4;
   font-size: 25px;
 }
+
+/* CM - Save contact text */
 
 .save-contact-text {
   flex: 1;
@@ -599,12 +548,17 @@ Assignment: QRLynk Personal Website
   font-size: 10px;
 }
 
+/* CM - Save contact arrow */
+
 .save-contact-arrow {
   font-size: 22px;
   color: #F4B6CC;
 }
 
-/* CM - Share page card */
+/* =========================================================
+   CM - SHARE PAGE CARD
+   Controls the page-sharing option and its supporting text.
+========================================================= */
 
 .share-card {
   width: 100%;
@@ -621,15 +575,21 @@ Assignment: QRLynk Personal Website
   text-align: left;
 }
 
+/* CM - Share card interaction */
+
 .share-card:active {
   transform: scale(0.97);
   background: #923B60;
 }
 
+/* CM - Share card icon */
+
 .share-card-icon {
   font-size: 27px;
   color: #F4B6CC;
 }
+
+/* CM - Share card text */
 
 .share-card-text {
   display: flex;
@@ -646,8 +606,27 @@ Assignment: QRLynk Personal Website
   font-size: 10px;
 }
 
+/* =========================================================
+   CM - ANIMATIONS
+   Controls transitions and reveal effects throughout the page.
+========================================================= */
 
-/* CM - Photography Portfolio Styling */
+@keyframes detailReveal {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================================
+   CM - PHOTOGRAPHY PORTFOLIO
+   Controls the photography page layout and section spacing.
+========================================================= */
 
 .photography-portfolio {
   display: flex;
@@ -656,7 +635,8 @@ Assignment: QRLynk Personal Website
   padding-bottom: 40px;
 }
 
-/* CM - Featured image */
+/* CM - Featured photography image */
+
 .photo-hero {
   position: relative;
   height: 420px;
@@ -670,6 +650,8 @@ Assignment: QRLynk Personal Website
   object-fit: cover;
   filter: brightness(0.7);
 }
+
+/* CM - Text overlay on featured photography */
 
 .photo-hero-overlay {
   position: absolute;
@@ -696,6 +678,7 @@ Assignment: QRLynk Personal Website
 }
 
 /* CM - Photography introduction */
+
 .photo-intro {
   padding: 0 5px;
 }
@@ -715,7 +698,11 @@ Assignment: QRLynk Personal Website
   font-size: 0.95rem;
 }
 
-/* CM - Gallery */
+/* =========================================================
+   CM - PHOTOGRAPHY GALLERY
+   Controls the photography gallery grid and image presentation.
+========================================================= */
+
 .photo-gallery {
   width: 100%;
 }
@@ -738,11 +725,17 @@ Assignment: QRLynk Personal Website
   transition: transform 0.3s ease;
 }
 
+/* CM - Gallery image hover interaction */
+
 .gallery-grid img:hover {
   transform: scale(1.025);
 }
 
-/* CM - Photography categories */
+/* =========================================================
+   CM - PHOTOGRAPHY CATEGORIES
+   Controls the list of photography services and categories.
+========================================================= */
+
 .photo-categories {
   padding: 25px 20px;
   background: rgba(215, 122, 158, 0.08);
@@ -773,7 +766,11 @@ Assignment: QRLynk Personal Website
   font-size: 0.95rem;
 }
 
-/* CM - Photography links */
+/* =========================================================
+   CM - PHOTOGRAPHY CALL TO ACTION
+   Controls the closing photography section and navigation links.
+========================================================= */
+
 .photo-cta {
   text-align: center;
   padding: 30px 20px;
@@ -793,20 +790,10 @@ Assignment: QRLynk Personal Website
   width: fit-content;
 }
 
-/* CM - Smaller mobile screens */
-@media (max-width: 380px) {
-  .photo-hero {
-    height: 350px;
-  }
-
-  .photo-hero-overlay h2 {
-    font-size: 2rem;
-  }
-
-  .gallery-grid img {
-    height: 165px;
-  }
-}
+/* =========================================================
+   CM - FOOTER
+   Controls the bottom of the website and social media shortcuts.
+========================================================= */
 
 .footer {
   display: flex;
@@ -815,6 +802,8 @@ Assignment: QRLynk Personal Website
   justify-content: center;
   gap: 12px;
   padding: 30px 20px;
+  border-top: 1px solid #492638;
+  color: #A87C90;
   text-align: center;
 }
 
@@ -825,6 +814,8 @@ Assignment: QRLynk Personal Website
   gap: 18px;
   margin-bottom: 5px;
 }
+
+/* CM - Footer social media links */
 
 .footer-socials a {
   display: flex;
@@ -841,7 +832,57 @@ Assignment: QRLynk Personal Website
   opacity: 0.65;
 }
 
+/* CM - Footer copyright and supporting text */
+
 .footer span {
   font-size: 10px;
   letter-spacing: 2px;
+}
+
+/* =========================================================
+   CM - RESPONSIVE DESIGN: SMALL MOBILE SCREENS
+   Adjusts spacing, typography, and image sizes for narrow screens.
+========================================================= */
+
+@media (max-width: 380px) {
+
+  /* CM - Main page spacing */
+
+  .page {
+    padding: 0 18px;
+  }
+
+  /* CM - Hero typography and image */
+
+  .hero h1 {
+    font-size: 65px;
+  }
+
+  .hero-image {
+    height: 320px;
+  }
+
+  /* CM - Section heading sizes */
+
+  .intro-section h2,
+  .create-section h2,
+  .connect-section h2 {
+    font-size: 50px;
+  }
+
+  /* CM - Photography featured image */
+
+  .photo-hero {
+    height: 350px;
+  }
+
+  .photo-hero-overlay h2 {
+    font-size: 2rem;
+  }
+
+  /* CM - Photography gallery images */
+
+  .gallery-grid img {
+    height: 165px;
+  }
 }
