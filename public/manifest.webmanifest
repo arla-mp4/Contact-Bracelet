@@ -1,17 +1,38 @@
 {
+  "id": "/",
   "name": "Cat Millwood",
   "short_name": "Cat Millwood",
-  "description": "Connect with Cat Millwood.",
+  "description": "Connect with Cat Millwood. Photography, technology, and everything in between.",
   "start_url": "/",
+  "scope": "/",
   "display": "standalone",
-  "background_color": "#24121D",
+  "orientation": "portrait",
+  "background_color": "#F5F1EA",
   "theme_color": "#24121D",
+  "categories": [
+    "lifestyle",
+    "photography",
+    "social"
+  ],
   "icons": [
     {
       "src": "/images/cm-contact.png",
-      "sizes": "600x600",
+      "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
+    },
+    {
+      "src": "/images/cm-contact.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/images/cm-contact.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
-  ]
+  ],
+  "prefer_related_applications": false
 }
