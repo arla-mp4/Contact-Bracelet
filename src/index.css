@@ -1,4 +1,9 @@
-root {
+/* ============================================================
+   CM - GLOBAL STYLES AND VARIABLES
+   ============================================================ */
+
+/* CM - Main theme, typography, and reusable color variables */
+:root {
   font-family: 'Trebuchet MS', sans-serif;
   color: #FFF0F4;
   background: #24121D;
@@ -12,49 +17,81 @@ root {
   --cream: #F8E9ED;
 }
 
+
+/* ============================================================
+   CM - UNIVERSAL ELEMENT RESET
+   ============================================================ */
+
+/* CM - Apply consistent sizing and remove default spacing */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+
+/* ============================================================
+   CM - DOCUMENT AND PAGE SETTINGS
+   ============================================================ */
+
+/* CM - Enable smooth scrolling between page sections */
 html {
   scroll-behavior: smooth;
 }
 
+/* CM - Set minimum page dimensions and background */
 body {
   min-width: 320px;
   min-height: 100vh;
   background: var(--pink-bg);
 }
 
+
+/* ============================================================
+   CM - GLOBAL ELEMENT STYLING
+   ============================================================ */
+
+/* CM - Keep buttons and links consistent with the page font */
 button,
 a {
   font: inherit;
 }
 
+/* CM - Display pointer cursor on interactive buttons */
 button {
   cursor: pointer;
 }
 
+/* CM - Remove default link styling */
 a {
   color: inherit;
   text-decoration: none;
 }
 
+/* CM - Keep images responsive within their containers */
 img {
   display: block;
   max-width: 100%;
 }
 
+
+/* ============================================================
+   CM - WEBSITE LOGO
+   ============================================================ */
+
+/* CM - Control logo dimensions and image fitting */
 .logo {
   width: 150px;
   height: auto;
   object-fit: contain;
 }
 
-/* CM - Technology Portfolio Styling */
 
+/* ============================================================
+   CM - TECHNOLOGY PORTFOLIO STYLING
+   ============================================================ */
+
+/* CM - Main technology portfolio layout */
 .technology-portfolio {
   display: flex;
   flex-direction: column;
@@ -62,7 +99,12 @@ img {
   padding-bottom: 40px;
 }
 
-/* CM - Technology hero */
+
+/* ------------------------------------------------------------
+   CM - TECHNOLOGY HERO SECTION
+   ------------------------------------------------------------ */
+
+/* CM - Main introduction banner for the technology page */
 .tech-hero {
   position: relative;
   overflow: hidden;
@@ -73,11 +115,13 @@ img {
   border: 1px solid rgba(215, 122, 158, 0.25);
 }
 
+/* CM - Position hero content above decorative elements */
 .tech-hero-content {
   position: relative;
   z-index: 2;
 }
 
+/* CM - Technology hero heading */
 .tech-hero h2 {
   max-width: 280px;
   color: #FFF0F4;
@@ -86,12 +130,19 @@ img {
   margin: 15px 0;
 }
 
+/* CM - Technology hero description */
 .tech-hero-content > p:last-child {
   color: #E5C9D5;
   line-height: 1.7;
   font-size: 0.9rem;
 }
 
+
+/* ------------------------------------------------------------
+   CM - TECHNOLOGY DECORATIVE ELEMENTS
+   ------------------------------------------------------------ */
+
+/* CM - Arrange decorative binary elements */
 .tech-decoration {
   display: flex;
   gap: 12px;
@@ -99,6 +150,7 @@ img {
   margin-top: 30px;
 }
 
+/* CM - Style decorative binary numbers */
 .tech-decoration span {
   color: #D77A9E;
   font-family: monospace;
@@ -106,7 +158,12 @@ img {
   opacity: 0.7;
 }
 
-/* CM - Project cards */
+
+/* ------------------------------------------------------------
+   CM - FEATURED TECHNOLOGY PROJECTS
+   ------------------------------------------------------------ */
+
+/* CM - Shared project and technology section headings */
 .tech-projects h2,
 .tech-interests h2,
 .tech-cta h2 {
@@ -115,6 +172,7 @@ img {
   margin: 10px 0 20px;
 }
 
+/* CM - Individual technology project cards */
 .tech-project-card {
   padding: 24px;
   margin-top: 16px;
@@ -123,6 +181,7 @@ img {
   border-radius: 20px;
 }
 
+/* CM - Project identification icon */
 .project-icon {
   width: 48px;
   height: 48px;
@@ -135,24 +194,28 @@ img {
   margin-bottom: 20px;
 }
 
+/* CM - Project number and identification label */
 .project-number {
   color: #D77A9E;
   font-size: 0.7rem;
   letter-spacing: 2px;
 }
 
+/* CM - Project titles */
 .tech-project-card h3 {
   color: #FFF0F4;
   font-size: 1.5rem;
   margin: 8px 0;
 }
 
+/* CM - Project descriptions */
 .tech-project-card p {
   color: #E5C9D5;
   line-height: 1.7;
   font-size: 0.9rem;
 }
 
+/* CM - Technology tags and tools used */
 .project-tag {
   display: inline-block;
   color: #D77A9E;
@@ -163,6 +226,7 @@ img {
   background: rgba(215, 122, 158, 0.12);
 }
 
+/* CM - Project repository and external links */
 .tech-project-card a {
   display: block;
   color: #FFF0F4;
@@ -173,13 +237,19 @@ img {
   padding-top: 16px;
 }
 
-/* CM - Technical interest cards */
+
+/* ------------------------------------------------------------
+   CM - TECHNICAL INTEREST CARDS
+   ------------------------------------------------------------ */
+
+/* CM - Two-column layout for technical interests */
 .tech-interest-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 12px;
 }
 
+/* CM - Individual technical interest cards */
 .tech-interest-card {
   min-height: 155px;
   padding: 18px;
@@ -188,24 +258,32 @@ img {
   border: 1px solid rgba(215, 122, 158, 0.2);
 }
 
+/* CM - Technical interest numbering */
 .tech-interest-card span {
   color: #D77A9E;
   font-size: 0.7rem;
 }
 
+/* CM - Technical interest titles */
 .tech-interest-card h3 {
   color: #FFF0F4;
   font-size: 1rem;
   margin: 18px 0 8px;
 }
 
+/* CM - Technical interest descriptions */
 .tech-interest-card p {
   color: #E5C9D5;
   font-size: 0.8rem;
   line-height: 1.5;
 }
 
-/* CM - Technology call to action */
+
+/* ------------------------------------------------------------
+   CM - TECHNOLOGY CALL TO ACTION
+   ------------------------------------------------------------ */
+
+/* CM - Final technology portfolio section */
 .tech-cta {
   text-align: center;
   padding: 30px 20px;
@@ -214,6 +292,7 @@ img {
   border-radius: 22px;
 }
 
+/* CM - Technology portfolio external link */
 .tech-cta .scroll-link {
   display: inline-block;
   margin-top: 12px;
@@ -225,9 +304,12 @@ img {
   padding-bottom: 8px;
 }
 
-/* CM - Detailed Everything Else Portfolio */
 
-/* CM - Main page layout */
+/* ============================================================
+   CM - EVERYTHING ELSE PORTFOLIO STYLING
+   ============================================================ */
+
+/* CM - Main Everything Else portfolio layout */
 .everything-portfolio {
   display: flex;
   flex-direction: column;
@@ -235,7 +317,12 @@ img {
   padding-bottom: 45px;
 }
 
-/* CM - Hero section */
+
+/* ------------------------------------------------------------
+   CM - PERSONAL INTRODUCTION HERO
+   ------------------------------------------------------------ */
+
+/* CM - Main personal introduction banner */
 .life-hero {
   position: relative;
   overflow: hidden;
@@ -250,6 +337,7 @@ img {
   border-radius: 22px;
 }
 
+/* CM - Shared horizontal alignment for hero and information headers */
 .life-hero-top,
 .life-hero-footer,
 .education-top,
@@ -261,6 +349,7 @@ img {
   gap: 12px;
 }
 
+/* CM - Decorative hero stamp */
 .life-stamp {
   padding: 7px 10px;
   border: 1px solid rgba(255, 240, 244, 0.35);
@@ -270,6 +359,7 @@ img {
   letter-spacing: 1px;
 }
 
+/* CM - Personal introduction hero heading */
 .life-hero h2 {
   color: #FFF0F4;
   font-size: clamp(2.2rem, 10vw, 3.2rem);
@@ -277,29 +367,38 @@ img {
   margin: 35px 0 22px;
 }
 
+/* CM - Personal introduction description */
 .life-hero > p:not(.eyebrow) {
   color: #FCE4EC;
   font-size: 0.95rem;
   line-height: 1.8;
 }
 
+/* CM - Bottom information row in the hero */
 .life-hero-footer {
   border-top: 1px solid rgba(255, 240, 244, 0.2);
   margin-top: 30px;
   padding-top: 18px;
 }
 
+/* CM - Hero footer labels */
 .life-hero-footer span {
   color: #F4B6CE;
   font-size: 0.6rem;
   letter-spacing: 1px;
 }
 
-/* CM - About section */
+
+/* ------------------------------------------------------------
+   CM - ABOUT ME SECTION
+   ------------------------------------------------------------ */
+
+/* CM - Personal introduction section spacing */
 .life-about {
   padding: 0 5px;
 }
 
+/* CM - Shared headings for personal portfolio sections */
 .life-about h2,
 .life-section h2,
 .life-summary h2,
@@ -310,6 +409,7 @@ img {
   margin: 12px 0 18px;
 }
 
+/* CM - Personal introduction paragraphs */
 .life-about p:not(.eyebrow) {
   color: #E5C9D5;
   font-size: 0.92rem;
@@ -317,18 +417,25 @@ img {
   margin-bottom: 15px;
 }
 
-/* CM - Section headings */
+
+/* ------------------------------------------------------------
+   CM - PERSONAL PORTFOLIO SECTION HEADINGS
+   ------------------------------------------------------------ */
+
+/* CM - Align section headings and decorative symbols */
 .life-section-heading {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+/* CM - Decorative section symbols */
 .life-section-symbol {
   color: #D77A9E;
   font-size: 1.7rem;
 }
 
+/* CM - Descriptive text beneath section headings */
 .life-section-description {
   color: #E5C9D5;
   font-size: 0.9rem;
@@ -336,6 +443,7 @@ img {
   margin-bottom: 20px;
 }
 
+/* CM - Small decorative notes beneath sections */
 .life-side-note {
   color: #D77A9E;
   font-size: 0.78rem;
@@ -344,7 +452,12 @@ img {
   margin-top: 18px;
 }
 
-/* CM - Education card */
+
+/* ------------------------------------------------------------
+   CM - EDUCATION AND DEGREE INFORMATION
+   ------------------------------------------------------------ */
+
+/* CM - Main academic information card */
 .education-card {
   padding: 24px;
   border-radius: 22px;
@@ -352,6 +465,7 @@ img {
   border: 1px solid rgba(215, 122, 158, 0.25);
 }
 
+/* CM - University and community card header labels */
 .education-top span,
 .community-card-top span {
   color: #D77A9E;
@@ -359,36 +473,42 @@ img {
   letter-spacing: 1px;
 }
 
+/* CM - Academic journey heading */
 .education-card h3 {
   color: #FFF0F4;
   font-size: 1.6rem;
   margin: 28px 0 8px;
 }
 
+/* CM - Primary degree program label */
 .education-degree {
   color: #F4B6CE !important;
   font-size: 0.9rem !important;
   font-weight: 600;
 }
 
+/* CM - General academic card descriptions */
 .education-card > p:not(.eyebrow) {
   color: #E5C9D5;
   font-size: 0.88rem;
   line-height: 1.8;
 }
 
+/* CM - Divider between academic information sections */
 .education-divider {
   height: 1px;
   background: rgba(215, 122, 158, 0.25);
   margin: 25px 0;
 }
 
+/* CM - Vertical list of degrees and minors */
 .degree-list {
   display: flex;
   flex-direction: column;
   margin-top: 15px;
 }
 
+/* CM - Individual degree list entries */
 .degree-list > div {
   display: flex;
   gap: 15px;
@@ -397,10 +517,12 @@ img {
   border-bottom: 1px solid rgba(215, 122, 158, 0.16);
 }
 
+/* CM - Remove the bottom border from the final degree entry */
 .degree-list > div:last-child {
   border-bottom: none;
 }
 
+/* CM - Degree list numbering */
 .degree-number {
   color: #D77A9E;
   font-family: monospace;
@@ -408,12 +530,14 @@ img {
   padding-top: 3px;
 }
 
+/* CM - Degree and minor titles */
 .degree-list h4 {
   color: #FFF0F4;
   font-size: 0.95rem;
   margin: 0 0 5px;
 }
 
+/* CM - Degree and minor descriptions */
 .degree-list p {
   color: #D9B9C7;
   font-size: 0.78rem;
@@ -421,7 +545,12 @@ img {
   margin: 0;
 }
 
-/* CM - Academic subject cards */
+
+/* ------------------------------------------------------------
+   CM - PSYCHOLOGY, SOCIOLOGY, AND CRIMINOLOGY CARDS
+   ------------------------------------------------------------ */
+
+/* CM - Individual academic subject cards */
 .subject-card {
   padding: 23px;
   margin-top: 15px;
@@ -430,6 +559,7 @@ img {
   border: 1px solid rgba(215, 122, 158, 0.2);
 }
 
+/* CM - Subject card header and category labels */
 .subject-card-header {
   display: flex;
   justify-content: space-between;
@@ -438,24 +568,28 @@ img {
   letter-spacing: 1px;
 }
 
+/* CM - Decorative subject symbols */
 .subject-symbol {
   color: #D77A9E;
   font-size: 2rem;
   margin-top: 24px;
 }
 
+/* CM - Academic subject titles */
 .subject-card h3 {
   color: #FFF0F4;
   font-size: 1.5rem;
   margin: 8px 0;
 }
 
+/* CM - Academic subject descriptions */
 .subject-card > p {
   color: #E5C9D5;
   font-size: 0.88rem;
   line-height: 1.8;
 }
 
+/* CM - Subject category tags layout */
 .subject-tags {
   display: flex;
   flex-wrap: wrap;
@@ -463,6 +597,7 @@ img {
   margin-top: 18px;
 }
 
+/* CM - Individual subject category tags */
 .subject-tags span {
   color: #F4B6CE;
   background: rgba(215, 122, 158, 0.12);
@@ -472,7 +607,12 @@ img {
   font-size: 0.68rem;
 }
 
-/* CM - Community involvement */
+
+/* ------------------------------------------------------------
+   CM - COMMUNITY INVOLVEMENT AND PROJECTS
+   ------------------------------------------------------------ */
+
+/* CM - Main community project card */
 .community-card {
   padding: 24px;
   border-radius: 22px;
@@ -480,18 +620,21 @@ img {
   border: 1px solid rgba(215, 122, 158, 0.25);
 }
 
+/* CM - Community organization heading */
 .community-card h3 {
   color: #FFF0F4;
   font-size: 1.7rem;
   margin: 25px 0 12px;
 }
 
+/* CM - Community project descriptions */
 .community-card > p {
   color: #E5C9D5;
   font-size: 0.88rem;
   line-height: 1.8;
 }
 
+/* CM - Featured community project highlight */
 .community-highlight {
   margin-top: 25px;
   padding: 20px;
@@ -500,30 +643,39 @@ img {
   border: 1px solid rgba(215, 122, 158, 0.2);
 }
 
+/* CM - Highlighted project category label */
 .community-highlight > span {
   color: #D77A9E;
   font-size: 0.65rem;
   letter-spacing: 1px;
 }
 
+/* CM - Highlighted project title */
 .community-highlight h4 {
   color: #FFF0F4;
   font-size: 1.15rem;
   margin: 12px 0 8px;
 }
 
+/* CM - Highlighted project description */
 .community-highlight p {
   color: #E5C9D5;
   font-size: 0.83rem;
   line-height: 1.7;
 }
 
-/* CM - Professional experience timeline */
+
+/* ------------------------------------------------------------
+   CM - PROFESSIONAL EXPERIENCE TIMELINE
+   ------------------------------------------------------------ */
+
+/* CM - Main experience timeline container */
 .experience-timeline {
   position: relative;
   margin-top: 25px;
 }
 
+/* CM - Individual timeline entries */
 .experience-item {
   display: flex;
   gap: 17px;
@@ -531,6 +683,7 @@ img {
   padding-bottom: 30px;
 }
 
+/* CM - Vertical connector between timeline entries */
 .experience-item:not(:last-child)::before {
   content: "";
   position: absolute;
@@ -541,6 +694,7 @@ img {
   background: rgba(215, 122, 158, 0.4);
 }
 
+/* CM - Numbered timeline markers */
 .experience-marker {
   position: relative;
   z-index: 1;
@@ -555,35 +709,45 @@ img {
   font-size: 0.7rem;
 }
 
+/* CM - Timeline entry content spacing */
 .experience-content {
   padding: 5px 0;
 }
 
+/* CM - Timeline category labels */
 .experience-content > span {
   color: #D77A9E;
   font-size: 0.65rem;
   letter-spacing: 1px;
 }
 
+/* CM - Timeline entry headings */
 .experience-content h3 {
   color: #FFF0F4;
   font-size: 1.1rem;
   margin: 9px 0;
 }
 
+/* CM - Timeline entry descriptions */
 .experience-content p {
   color: #E5C9D5;
   font-size: 0.85rem;
   line-height: 1.8;
 }
 
-/* CM - Personal interest grid */
+
+/* ------------------------------------------------------------
+   CM - PERSONAL INTEREST GRID
+   ------------------------------------------------------------ */
+
+/* CM - Two-column layout for personal interests */
 .life-interest-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 12px;
 }
 
+/* CM - Individual personal interest cards */
 .life-interest-card {
   min-height: 175px;
   padding: 18px;
@@ -592,34 +756,44 @@ img {
   border: 1px solid rgba(215, 122, 158, 0.2);
 }
 
+/* CM - Optional decorative interest symbols */
 .life-interest-card > span {
   color: #D77A9E;
   font-size: 1.4rem;
 }
 
+/* CM - Personal interest card titles */
 .life-interest-card h3 {
   color: #FFF0F4;
   font-size: 0.95rem;
   margin: 15px 0 8px;
 }
 
+/* CM - Personal interest card descriptions */
 .life-interest-card p {
   color: #E5C9D5;
   font-size: 0.78rem;
   line-height: 1.65;
 }
 
-/* CM - Personal summary */
+
+/* ------------------------------------------------------------
+   CM - PERSONAL SUMMARY SECTION
+   ------------------------------------------------------------ */
+
+/* CM - Final personal summary card */
 .life-summary {
   padding: 27px 23px;
   border-radius: 22px;
   background: linear-gradient(145deg, #923B60, #491D32);
 }
 
+/* CM - Personal summary heading */
 .life-summary h2 {
   font-size: 2.1rem;
 }
 
+/* CM - Personal summary paragraphs */
 .life-summary > p:not(.eyebrow) {
   color: #FCE4EC;
   font-size: 0.88rem;
@@ -627,19 +801,26 @@ img {
   margin-bottom: 15px;
 }
 
+/* CM - Closing signature and sign-off */
 .life-summary-signoff {
   border-top: 1px solid rgba(255, 240, 244, 0.25);
   margin-top: 25px;
   padding-top: 18px;
 }
 
+/* CM - Summary sign-off labels */
 .life-summary-signoff span {
   color: #F4B6CE;
   font-size: 0.62rem;
   letter-spacing: 1px;
 }
 
-/* CM - Navigation links */
+
+/* ------------------------------------------------------------
+   CM - PERSONAL PORTFOLIO NAVIGATION
+   ------------------------------------------------------------ */
+
+/* CM - Final navigation card */
 .life-cta {
   padding: 28px 22px;
   border-radius: 22px;
@@ -647,12 +828,14 @@ img {
   border: 1px solid rgba(215, 122, 158, 0.2);
 }
 
+/* CM - Navigation introduction text */
 .life-cta > p:not(.eyebrow) {
   color: #E5C9D5;
   font-size: 0.88rem;
   line-height: 1.7;
 }
 
+/* CM - Individual portfolio navigation links */
 .life-page-link {
   display: flex;
   justify-content: space-between;
@@ -664,37 +847,50 @@ img {
   font-size: 0.9rem;
 }
 
+/* CM - Remove border from final navigation link */
 .life-page-link:last-child {
   border-bottom: none;
 }
 
+/* CM - Navigation link numbering and indicators */
 .life-page-link span:last-child {
   color: #D77A9E;
   font-size: 0.7rem;
   letter-spacing: 1px;
 }
 
-/* CM - Small screen adjustments */
+
+/* ============================================================
+   CM - RESPONSIVE DESIGN
+   ============================================================ */
+
+/* CM - Adjust portfolio layouts for very small screens */
 @media (max-width: 380px) {
+
+  /* CM - Reduce hero spacing */
   .life-hero {
     padding: 25px 18px;
   }
 
+  /* CM - Adjust hero heading size */
   .life-hero h2 {
     font-size: 2.2rem;
   }
 
+  /* CM - Adjust personal interest cards */
   .life-interest-card {
     padding: 14px;
     min-height: 185px;
   }
 
+  /* CM - Reduce padding on content cards */
   .education-card,
   .community-card,
   .subject-card {
     padding: 19px;
   }
 
+  /* CM - Adjust summary sign-off text */
   .life-summary-signoff span {
     font-size: 0.52rem;
   }
