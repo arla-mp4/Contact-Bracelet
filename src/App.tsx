@@ -844,8 +844,49 @@ function App() {
       </section>
 
       <footer className="footer">
-        <span>MADE WITH A LITTLE PERSONALITY ♡</span>
-        <span>CAT MILLWOOD © 2026</span>
+        <div className="footer-socials">
+          <a
+            href="https://www.instagram.com/cat.millwood.photography/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Photography Instagram"
+            title="Instagram"
+          >
+            <FaInstagram />
+          </a>
+
+          <a
+            href="https://www.facebook.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+            title="Facebook"
+          >
+            <FaFacebookF />
+          </a>
+
+          <a
+            href="https://catmillwood.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Photography Website"
+            title="Photography Website"
+          >
+            <FaGlobe />
+          </a>
+
+          <a
+            href="mailto:your-email@example.com"
+            aria-label="Email"
+            title="Email"
+          >
+            <FaEnvelope />
+          </a>
+        </div>
+
+        <span>MADE WITH SPARKLES AND LOVE ♡</span>
+
+        <span>CAT MILLWOOD PHOTOGRAPHY © 2026</span>
       </footer>
     </main>
   );
